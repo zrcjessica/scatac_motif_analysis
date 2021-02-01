@@ -1,5 +1,11 @@
+# output directory
 out: out
+
+# where BED files generated from narrowPeak files are saved
 tmp: tmp
+
+# if true, delete BED files generated from narrowPeak files
+clean: False
 
 # path to directory with homer scripts
 homer_dir: /iblm/netapp/home/jezhou/homer/bin
@@ -36,7 +42,3 @@ window_sizes: [200, 500, 1000]
 # if true, run findMotifsGenome.pl with background set for each cell type
 # background set consists of peaks from all other cell types
 background: False
-
-# if true, delete bed files generated from narrowPeak files
-# recommended set to false, these bed files may be useful for other analyses
-clean: False
