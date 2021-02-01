@@ -1,0 +1,42 @@
+out: out
+tmp: tmp
+
+# path to directory with homer scripts
+homer_dir: /iblm/netapp/home/jezhou/homer/bin
+
+samples: [Rat_Amygdala_cocaine_low,
+Rat_Amygdala_cocaine_high,
+pfc]
+
+celltypes: [InhNeuron,
+Vip+,
+ExNeuron,
+Astrocytes,
+Sst+,
+Microglia,
+Oligodendrocytes,
+OPC,
+Reln+,
+Cck+,
+Endothelial,
+Chat+,
+Nos1+,
+Pvalb+]
+
+# path to folder with outputs of MACS peak calling 
+# this folder should contain a subdirectory named after each cell type listed above
+# each cell type subdirectory needs to contain a {celltype}_peaks.narrowPeak file
+peaks_dir: ../data/snATAC/macs2/peaks/from_signac
+
+# specifications for HOMER findMotifsGenome.pl
+genome: rn6
+window_sizes: [200, 500, 1000]
+# gtf: /iblm/netapp/data1/external/Ensembl/Rnor_6.0.98/Rnor_chr.gtf
+
+# if true, run findMotifsGenome.pl with background set for each cell type
+# background set consists of peaks from all other cell types
+background: False
+
+# if true, delete bed files generated from narrowPeak files
+# recommended set to false, these bed files may be useful for other analyses
+clean: False
