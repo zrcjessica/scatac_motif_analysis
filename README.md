@@ -85,7 +85,7 @@ If `True`, remove the BED files generated from each `.narrowPeak` file when the 
 Path to directory where HOMER scripts are located
 
 ### [`samples`](https://github.com/zrcjessica/scatac_motif_analysis/blob/8b80306c4ee164c16417505e4cb37e4d7fc87a3d/config.yml#L7)
-List of sample names in your dataset. Sample names must correspond to the names of the directories containing cell type-specific MACS outputs (see above). 
+List of sample names in your dataset. Sample names must correspond to the names of the directories containing cell type-specific MACS outputs (see [above](https://github.com/zrcjessica/scatac_motif_analysis/blob/main/README.md#input-data)). 
 
 ### [`celltypes`](https://github.com/zrcjessica/scatac_motif_analysis/blob/8b80306c4ee164c16417505e4cb37e4d7fc87a3d/config.yml#L11)
 List of cell types to be analyzed. This script is designed such that it will analyze the same cell types across all samples. If you would like to analyze different cell types for each sample, you should make modifications to the Snakefile. 
