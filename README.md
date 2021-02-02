@@ -100,5 +100,5 @@ This is the `<genome>` argument for `findMotifsGenome.pl`. See [HOMER docs](http
 This is the value for the `-size` argument of `findMotifsGenome.pl`. Can give a single value or a list of values if you would like to run the analysis with different window sizes. See [HOMER docs](http://homer.ucsd.edu/homer/ngs/peakMotifs.html) for more info.
 
 ### [`background`](https://github.com/zrcjessica/scatac_motif_analysis/blob/8b80306c4ee164c16417505e4cb37e4d7fc87a3d/config.yml#L38)
-Set True if you would like to run `findMotifsGenome.pl` with a background set of peaks. For each cell type under each sample, this pipeline will create a background set of peaks comprised of peaks observed in all other cell types of that same sample.
+Set to `True` if you would like to run `findMotifsGenome.pl` with a background set of peaks. For each cell type under each sample, this pipeline will create a background set of peaks comprised of peaks observed in all other cell types of that same sample.
 
