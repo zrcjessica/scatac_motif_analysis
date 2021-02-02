@@ -69,36 +69,36 @@ This pipeline also assumes that your input data are ordered in a certain way. E.
 │   │   └── CelltypeN_treat_pileup.bdg
 ```
 
-## `config.yml`
+## [`config.yml`](https://github.com/zrcjessica/scatac_motif_analysis/blob/main/config.yml)
 Fill out each of the fields in the `config.yml` file such that they describe your data.
 
-### `out`
+### [`out`](https://github.com/zrcjessica/scatac_motif_analysis/blob/8b80306c4ee164c16417505e4cb37e4d7fc87a3d/config.yml#L1)
 Path to output directory where outputs of HOMER are saved
 
-### `tmp`
+### [`tmp`](https://github.com/zrcjessica/scatac_motif_analysis/blob/8b80306c4ee164c16417505e4cb37e4d7fc87a3d/config.yml#L2)
 This is where BED files generated from the `.narrowPeak` files are saved. Option to delete these BED files when pipeline completes. 
 
-### `clean`
+### [`clean`](https://github.com/zrcjessica/scatac_motif_analysis/blob/8b80306c4ee164c16417505e4cb37e4d7fc87a3d/config.yml#L42)
 If `True`, remove the BED files generated from each `.narrowPeak` file when the pipeline completes. 
 
-### `homer_dir`
+### [`homer_dir`](https://github.com/zrcjessica/scatac_motif_analysis/blob/8b80306c4ee164c16417505e4cb37e4d7fc87a3d/config.yml#L5)
 Path to directory where HOMER scripts are located
 
-### `samples`
+### [`samples`](https://github.com/zrcjessica/scatac_motif_analysis/blob/8b80306c4ee164c16417505e4cb37e4d7fc87a3d/config.yml#L7)
 List of sample names in your dataset. Sample names must correspond to the names of the directories containing cell type-specific MACS outputs (see above). 
 
-### `celltypes`
+### [`celltypes`](https://github.com/zrcjessica/scatac_motif_analysis/blob/8b80306c4ee164c16417505e4cb37e4d7fc87a3d/config.yml#L11)
 List of cell types to be analyzed. This script is designed such that it will analyze the same cell types across all samples. If you would like to analyze different cell types for each sample, you should make modifications to the Snakefile. 
 
-### `peaks_dir`
+### [`peaks_dir`](https://github.com/zrcjessica/scatac_motif_analysis/blob/8b80306c4ee164c16417505e4cb37e4d7fc87a3d/config.yml#L29)
 This is the directory where the MACS output for each sample and cell type are saved. 
 
-### `genome`
+### [`genome`](https://github.com/zrcjessica/scatac_motif_analysis/blob/8b80306c4ee164c16417505e4cb37e4d7fc87a3d/config.yml#L32)
 This is the `<genome>` argument for `findMotifsGenome.pl`. See [HOMER docs](http://homer.ucsd.edu/homer/ngs/peakMotifs.html) for more info.
 
-### `window_sizes` 
+### [`window_sizes`](https://github.com/zrcjessica/scatac_motif_analysis/blob/8b80306c4ee164c16417505e4cb37e4d7fc87a3d/config.yml#L33)
 This is the value for the `-size` argument of `findMotifsGenome.pl`. Can give a single value or a list of values if you would like to run the analysis with different window sizes. See [HOMER docs](http://homer.ucsd.edu/homer/ngs/peakMotifs.html) for more info.
 
-### `background`
+### [`background`](https://github.com/zrcjessica/scatac_motif_analysis/blob/8b80306c4ee164c16417505e4cb37e4d7fc87a3d/config.yml#L38)
 Set True if you would like to run `findMotifsGenome.pl` with a background set of peaks. For each cell type under each sample, this pipeline will create a background set of peaks comprised of peaks observed in all other cell types of that same sample.
 
