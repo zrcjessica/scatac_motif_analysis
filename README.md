@@ -3,7 +3,7 @@
 This pipeline runs HOMER on single-cell ATAC-seq data to find motifs ([`findMotifsGenome.pl`](http://homer.ucsd.edu/homer/motif/)) and annotate peaks ([`annotatePeaks.pl`](http://homer.ucsd.edu/homer/ngs/annotation.html)) in a cell type-specific manner. This pipeline assumes that you have peak calling outputs from MACS for each of your cell types and samples. To run this pipeline on your data, make modifications to the config file such that the parameters describe your own data. Alternatively, make changes to the Snakefile itself for greater flexibility. Then execute the pipeline as you would any other Snakemake pipeline.
 
 ## Input data
-This pipeline assumes that you have peak calling outputs from MACS for each of your cell types and samples. This is because it will generate a BED file from each `.narrowPeak` output file and prepend `chr` to each chromosome in the first column. If your `.narrowPeak` files already have `chr` in the first column, then you may want to modify the shell command in the `parse_bed` rule of the Snakefile.
+This pipeline assumes that you have peak calling outputs from MACS for each of your cell types and samples. This is because it will generate a BED file from each `.narrowPeak` output file and prepend `chr` to each chromosome in the first column. If your `.narrowPeak` files already have `chr` in the first column, then you may want to modify the shell command in the [`parse_bed`](https://github.com/zrcjessica/scatac_motif_analysis/blob/007e9d580dcea79e55bab4e4c37e59ed017ac45d/Snakefile#L50) rule of the Snakefile.
 
 This pipeline also assumes that your input data are ordered in a certain way. E.g.:
 ```bash
